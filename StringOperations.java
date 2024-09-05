@@ -58,26 +58,20 @@ public class StringOperations {
         Constant constant = new Constant();
 
         System.out.println(constant.ENTER_STRING);
-        String string = input.nextLine();
+        String text = input.nextLine();
 
         System.out.println(constant.PREV_STRING);
-        String old_string = input.nextLine();
-        int old_string_length = old_string.length();
+        char old_char = input.next().charAt(0);
 
         System.out.println(constant.REPLACE_STRING);
-        String new_string = input.nextLine();
+        char new_char = input.next().charAt(0);
 
-        for (int i = 0; i < string.length(); i++) {
-            for (int j = 0; j < old_string_length; j++) {
-                if (string.charAt(i + j) == old_string.charAt(j)) {
-                    continue;
-                }
-                if (j == old_string_length - 1) {
-                    string = string.substring(i, i + old_string_length) + new_string + string.substring(i + new_string.length());
-                }
+        for (int i = 0; i < text.length(); i++) {
+            if (text.charAt(i) == old_char) {
+                text = text.substring(0, i) + new_char + text.substring(i + 1);
             }
         }
-        System.out.println(string);
+        System.out.println(text);
     }
 
     final public void isPalindrome() {       // To check whether a string is palindrome or not
