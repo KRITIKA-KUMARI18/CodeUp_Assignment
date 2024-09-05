@@ -3,7 +3,6 @@
  * The available operations are listed below:
  * Append, CountWords, Replace, isPalindrome, Splice, Split,
  * MaxRepeatingCharacter, Sort, Shift, and Reverse.
-
  * Owner name --> Kritika Kumari
  * Date --> 4 September 2024
  */
@@ -15,7 +14,7 @@ public class StringOperations {
 
     Scanner input = new Scanner(System.in);
 
-    final public void Append() {
+    final public void Append() {         // To add two or more strings
         Constant constant = new Constant();
         char choice;
 
@@ -33,15 +32,16 @@ public class StringOperations {
         } while (choice == 'y' || choice == 'Y');
     }
 
-    final public void WordsCount() {
+    final public void WordsCount() {        // To count the words in a string
 
         Constant constant = new Constant();
+        System.out.println(constant.CAUTION);
         System.out.println(constant.ENTER_STRING);
         String str = input.nextLine();
         int count = 0;
 
         for (int i = 0; i < str.length() - 1; i++) {
-            if (str.charAt(i) == ' ') {
+            if (i > 0 && str.charAt(i) == ' ') {
                 if (str.charAt(i) == str.charAt(i + 1)) {
 
                 } else {
@@ -49,10 +49,11 @@ public class StringOperations {
                 }
             }
         }
-        System.out.println("It has " + count + " words");
+        count += 1;
+        System.out.println("It has " + count + " word");
     }
 
-    final public void Replace() {
+    final public void Replace() {         // To replace some characters in a string with another characters
 
         Constant constant = new Constant();
 
@@ -79,7 +80,7 @@ public class StringOperations {
         System.out.println(string);
     }
 
-    final public void isPalindrome() {
+    final public void isPalindrome() {       // To check whether a string is palindrome or not
 
         Constant constant = new Constant();
         System.out.println(constant.ENTER_STRING);
@@ -98,11 +99,11 @@ public class StringOperations {
         if (c == n) {
             System.out.println(str + constant.PALINDROME);
         } else {
-            System.out.println(str + constant.PALINDROME);
+            System.out.println(str + constant.NOT_PALINDROME);
         }
     }
 
-    final public void Splice() {
+    final public void Splice() {      // To remove some strings from a given string
 
         Constant constant = new Constant();
         System.out.println(constant.ENTER_STRING);
@@ -117,7 +118,7 @@ public class StringOperations {
 
     }
 
-    final public void Split() {
+    final public void Split() {        // To split a string into words
 
         Constant constant = new Constant();
         System.out.println(constant.EXCEPTION);
@@ -142,7 +143,7 @@ public class StringOperations {
         System.out.println();
     }
 
-    final public void MaxRepeatChar() {
+    final public void MaxRepeatChar() {       // To find the maximum repeating character in the string
 
         Constant constant = new Constant();
         System.out.println(constant.ENTER_STRING);
@@ -151,9 +152,9 @@ public class StringOperations {
         int length = string.length();
         int count1 = 0;
         char maxChar = ' ';
-        for (int i = 0; i < length - 1; i++) {
-            int count2 = 1;
-            for (int j = i + 1; j < length; j++) {
+        for (int i = 0; i < length; i++) {
+            int count2 = 0;
+            for (int j = i; j < length; j++) {
                 if (string.charAt(i) == string.charAt(j)) {
                     count2++;
                 }
@@ -168,7 +169,7 @@ public class StringOperations {
         System.out.println(count1);
     }
 
-    final public void Sort() {
+    final public void Sort() {         // To sort the alphabets of the string as per their ASCII value
 
         Constant constant = new Constant();
         System.out.println(constant.ENTER_STRING);
@@ -184,13 +185,13 @@ public class StringOperations {
                 }
             }
         }
-        for (int i = 0; i < textArray.length; i++) {
-            System.out.print(textArray[i]);
+        for (char c : textArray) {
+            System.out.print(c);
         }
         System.out.println();
     }
 
-    final public void Shift() {
+    final public void Shift() {        // To shift the starting characters of a string at the end
 
         Constant constant = new Constant();
         System.out.println(constant.ENTER_STRING);
@@ -202,7 +203,7 @@ public class StringOperations {
         System.out.println(shifted_text);
     }
 
-    final public void Reverse() {
+    final public void Reverse() {       // To reverse the string
 
         Constant constant = new Constant();
         System.out.println(constant.ENTER_STRING);

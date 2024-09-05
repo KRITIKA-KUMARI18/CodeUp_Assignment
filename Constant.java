@@ -1,9 +1,8 @@
 /***
  * This class is for all the string values that has been used to
  *  display to the user in the StringOperations Class.
-
  *  Owner name --> Kritika Kumari
- *  Creation Date --> 05 September 2024
+ *  Creation Date --> 04 September 2024
  */
 package Assignment_2;
 
@@ -12,6 +11,7 @@ public class Constant {
     final String ANOTHER_INPUT = "If you want to perform any another operation press 'y' else press any other character" ;
     final String APPEND_STRING = "If you want to append another string press y else press any other character";
     final String ENTER_STRING = "Enter the String: ";
+    final String CAUTION = "  ** WHITESPACE at index zero will be counted as ONE word.";
     final String PALINDROME = " is Palindrome";
     final String NOT_PALINDROME = " is not Palindrome";
     final String REVERSE_STRING = "Reverse String is: ";
